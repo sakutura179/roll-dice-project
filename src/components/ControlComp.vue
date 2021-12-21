@@ -1,16 +1,16 @@
 <template>
   <div>
     <button class="control btn-new" v-on:click="handleNewGame">
-      <i class="ion-ios-plus-outline"></i>New game
+      <i class='bx bx-plus-circle'></i>Game mới
     </button>
     <button class="control btn-roll" v-on:click="handleRollDice">
-      <i class="ion-ios-loop"></i>Roll dice
+      <i class='bx bx-dice-6'></i>Xoay xúc xắc
     </button>
     <button class="control btn-hold" v-on:click="handleHold">
-      <i class="ion-ios-download-outline"></i>Hold
+      <i class='bx bx-message-alt-add'></i>Giữ điểm
     </button>
 
-    <input type="number" placeholder="Final score" class="final-score" />
+    <input type="number" placeholder="Mục tiêu" class="final-score" />
   </div>
 </template>
 
@@ -45,7 +45,7 @@ export default {
   border: none;
   outline: none;
   font-size: 20px;
-  font-family: Lato;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 300;
@@ -58,7 +58,7 @@ export default {
 }
 
 .control:hover {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .control:hover i {
@@ -68,7 +68,7 @@ export default {
 .control i {
   display: inline-block;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 20px;
   transition: all 0.3s ease;
 }
 
@@ -97,7 +97,7 @@ export default {
   width: 15%;
   padding: 10px;
   font-size: 16px;
-  font-family: Lato;
+  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
 }
 

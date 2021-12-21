@@ -32,12 +32,12 @@ export default {
     return {
       players: [
         {
-          name: "Player 1",
+          name: "Người chơi 1",
           score: 0,
           current: 0,
         },
         {
-          name: "Player 2",
+          name: "Người chơi 2",
           score: 0,
           current: 0,
         },
@@ -72,7 +72,7 @@ export default {
       this.dice[1].active = 1;
       this.activePlayer = 0;
       this.winnerPlayer = -1;
-      alert("Đã bắt đầu trò chơi mới");
+      alert("Luật chơi: người thắng cuộc là người chơi đạt được điểm mục tiêu sớm nhất. Nếu xúc xắc xoay ra số 1, người chơi sẽ mất điểm hiện tại và chuyển lượt chơi");
     },
     handleRollDice() {
       this.finalScore = document.querySelector("input").value;
@@ -101,13 +101,12 @@ export default {
       if (this.isPlaying === false) {
         alert("Vui lòng nhấn New Game");
       } else if (player.current === 0) {
-        alert("Vui lòng nhấn Roll Dice");
+        alert("Vui lòng xoay xúc xắc");
       } else {
-        alert("You Hold!");
         player.score += player.current;
         player.current = 0;
         if (player.score >= this.finalScore) {
-          player.name = "Winner";
+          player.name = "Chiến thắng";
           this.isPlaying = false;
           this.winnerPlayer = this.activePlayer;
           this.activePlayer = -1;
@@ -124,7 +123,7 @@ export default {
 
 <style>
 #app {
-  font-family: Lato;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
